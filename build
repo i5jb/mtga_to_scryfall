@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+./download_scryfall_oraclecards.py
+  # outputs: oracle-cards.jsonl
+./scryfall_simplify.py \
+  ./oracle-cards.jsonl \
+  > scryfall_all.json
+
+./download_arena_cardsfile.py
+  # outputs: card_database.sqlite3
+./arena_list_of_digital.py \
+  ./card_database.sqlite3 \
+  > arena_digital_names.json
+./arena_extract.py \
+  ./card_database.sqlite3 \
+  ./arena_digital_names.json \
+  ./scryfall_all.json \
+  > arena_digital.json
+
+./get_json_subset.py \
+  ./scryfall_all.json \
+  ./arena_digital_names.json \
+  > scryfall_digital.json

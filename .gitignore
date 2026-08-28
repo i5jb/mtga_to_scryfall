@@ -1,0 +1,8 @@
+__pycache__
+cache
+oracle-cards.jsonl
+scryfall_all.json
+card_database.sqlite3
+arena_digital_names.json
+arena_digital.json
+scryfall_digital.json
