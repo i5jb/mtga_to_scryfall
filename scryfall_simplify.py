@@ -42,13 +42,13 @@ for card in oracle_cards:
   if (card["name"] == "Red Herring") and (card["set"] == "cmb2"): continue
   if (card["name"] == "Unquenchable Fury") and (card["set"] == "tbth"): continue
 
-  oracle_id = card["oracle_id"]
+  #oracle_id = card["oracle_id"]
   layout = card["layout"]
   name = card["name"]
   type_line = card["type_line"]
 
   simplified_card = {}
-  simplified_card["oracle_id"] = card["oracle_id"]
+  #simplified_card["oracle_id"] = card["oracle_id"]
   simplified_card["name"] = card["name"]
   simplified_card["layout"] = card["layout"]
   simplified_card["type_line"] = card["type_line"]

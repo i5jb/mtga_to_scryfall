@@ -11,13 +11,23 @@
 ./arena_list_of_digital.py \
   ./card_database.sqlite3 \
   > arena_digital_names.json
+
 ./arena_extract.py \
   ./card_database.sqlite3 \
   ./arena_digital_names.json \
   ./scryfall_all.json \
-  > arena_digital.json
+  > data/arena_digital.json
+
+./list_abilities_of_enter_the_eternities.py \
+  ./card_database.sqlite3 \
+  > data/enter_the_eternities_draft_pool.txt
+
+./spellbook_extract.py \
+  ./card_database.sqlite3 \
+  > data/spellbooks.jsonl
 
 ./get_json_subset.py \
   ./scryfall_all.json \
   ./arena_digital_names.json \
-  > scryfall_digital.json
+  > data/scryfall_digital.json
+
